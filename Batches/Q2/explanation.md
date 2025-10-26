@@ -29,22 +29,15 @@ Two possible ways to split the string into valid words:
 
 **Algorithm / Approach:**
 
-We solve this using DFS + Memoization (backtracking):
-
-Convert wordDict into a set for O(1) lookups.
+1.We solve this using DFS + Memoization (backtracking): Convert wordDict into a set for O(1) lookups.
 
 Define a recursive function dfs(start) that returns all valid sentences formed from s[start:].
 
-For each possible end index end > start:
-
-If s[start:end] is in the word set:
-
+3.For each possible end index end > start: 
+If s[start:end] is in the word set: 
 Recursively get all sentences from dfs(end) (the rest of the string).
-
 Prepend s[start:end] to each sentence from the recursion (with a space if needed).
-
 Use a memo dictionary to store results for each start index to avoid recomputation.
-
 Return the list of sentences for dfs(0) — the full string.
 
 **Why this works:**
