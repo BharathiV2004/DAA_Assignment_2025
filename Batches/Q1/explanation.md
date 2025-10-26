@@ -1,15 +1,15 @@
-Minimum Path Sum in a Triangle:
+**Minimum Path Sum in a Triangle:**
 
-Problem Link:
+**Problem Link:**
 
 [LeetCode - Triangle](https://leetcode.com/problems/triangle/)
 
-Problem Statement:
+**Problem Statement:**
 
 Given a triangle array, find the minimum path sum from top to bottom.  
 At each step, you may move to adjacent numbers on the row below.
 
-Example Triangle:
+**Example Triangle:**
 
 2
 3 4
@@ -18,7 +18,7 @@ Example Triangle:
 
 The minimum path sum here is `11` (2 → 3 → 5 → 1).
 
-Algorithm / Approach:
+**Algorithm / Approach:**
 
 We solve this using a bottom-up dynamic programming approach:
 
@@ -34,11 +34,11 @@ We solve this using a bottom-up dynamic programming approach:
 3. Repeat until you reach the top row: 
    After processing all rows, `running_totals[0]` contains the **minimum path sum from top to bottom.
 
-Why this works:
+**Why this works:**
 
 Each element only depends on the two elements below it. By starting from the bottom, we always know the minimum sums of the paths below, so we can update efficiently without needing a full 2D DP table.
 
-Time and Space Complexity
+**Time and Space Complexity:**
 
 - Time Complexity: O(n²)  
   We visit each element exactly once.
@@ -46,9 +46,9 @@ Time and Space Complexity
 - Space Complexity: O(n)  
   We only need a single list to store the running totals of the current row.
 
-Example Input / Output:
+**Example Input / Output:**
 
-Input:
+**Input:**
 
 triangle = [
     [1],
@@ -56,8 +56,8 @@ triangle = [
     [4, 5, 6]
 ]
 
-Output:
+**Output:**
 
 7
 
-Explanation: The minimum path is 1 → 2 → 4 = 7.
+**Explanation:** The minimum path is 1 → 2 → 4 = 7.
