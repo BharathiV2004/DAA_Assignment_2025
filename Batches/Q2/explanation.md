@@ -55,3 +55,14 @@ DFS explores all possible segmentations, and memoization ensures we do not recom
 Time Complexity: Exponential in the worst case (number of possible sentences). Memoization reduces repeated work.
 
 Space Complexity: O(n * L) for recursion stack and memo storage (n = length of string, L = average length of sentence). Output space can also be exponential.
+
+**Example:**
+
+**Input:**
+
+s = "pineapplepenapple"
+wordDict = ["apple", "pen", "applepen", "pine", "pineapple"]
+
+**Output:**
+
+['pine apple pen apple', 'pineapple pen apple', 'pine applepen apple']
