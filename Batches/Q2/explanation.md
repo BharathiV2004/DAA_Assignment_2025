@@ -34,6 +34,7 @@ Two possible ways to split the string into valid words:
 2.Define a recursive function dfs(start) that returns all valid sentences formed from s[start:].
 
 3.For each possible end index end > start:
+   
    If s[start:end] is in the word set: 
   
 - Recursively get all sentences from dfs(end) (the rest of the string).
