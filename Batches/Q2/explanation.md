@@ -52,7 +52,7 @@ DFS explores all possible segmentations, and memoization ensures we do not recom
 
 - Space Complexity: O(n * L) for recursion stack and memo storage (n = length of string, L = average length of sentence). Output space can also be exponential.
 
-**Example:**
+**Example Input / Output:**
 
 **Input:**
 
@@ -62,3 +62,15 @@ wordDict = ["apple", "pen", "applepen", "pine", "pineapple"]
 **Output:**
 
 ['pine apple pen apple', 'pineapple pen apple', 'pine applepen apple']
+
+**Explanation:**
+
+The string "pineapplepenapple" can be split into dictionary words in three ways:
+
+"pine apple pen apple"
+
+"pineapple pen apple"
+
+"pine applepen apple"
+
+Each segment in every sentence is a valid word from the dictionary. DFS explores all splits, and memoization avoids repeated work.
