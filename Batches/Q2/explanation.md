@@ -40,6 +40,7 @@ Use a memo dictionary to store results for each start index to avoid recomputati
 Return the list of sentences for dfs(0) — the full string.
 
 **Why this works:**
+
 DFS explores all possible segmentations, and memoization ensures we do not recompute results for the same substring multiple times, which drastically improves efficiency.
 
 **Time and Space Complexity:**
