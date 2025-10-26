@@ -1,31 +1,32 @@
-Problem Link:
+**Problem Link:**
+
 [LeetCode - Word Break II](https://leetcode.com/problems/word-break-ii/description/)
 
-Problem Statement:
+**Problem Statement:**
 Given a string s and a dictionary of words wordDict, return all possible sentences where s can be segmented into space-separated words from the dictionary.
 Each word in the dictionary may be used multiple times.
 
-Example Input / Output:
+**Example Input / Output:**
 
-Input:
+**Input:**
 
 s = "catsanddog"
 wordDict = ["cat", "cats", "and", "sand", "dog"]
 
 
-Output:
+**Output:**
 
 ["cats and dog", "cat sand dog"]
 
 
-Explanation:
+**Explanation:**
 Two possible ways to split the string into valid words:
 
 "cats and dog"
 
 "cat sand dog"
 
-Algorithm / Approach:
+**Algorithm / Approach:**
 
 We solve this using DFS + Memoization (backtracking):
 
@@ -45,10 +46,10 @@ Use a memo dictionary to store results for each start index to avoid recomputati
 
 Return the list of sentences for dfs(0) — the full string.
 
-Why this works:
+**Why this works:**
 DFS explores all possible segmentations, and memoization ensures we do not recompute results for the same substring multiple times, which drastically improves efficiency.
 
-Time and Space Complexity:
+**Time and Space Complexity:**
 
 Time Complexity: Exponential in the worst case (number of possible sentences). Memoization reduces repeated work.
 
