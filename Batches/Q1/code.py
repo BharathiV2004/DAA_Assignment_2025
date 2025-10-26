@@ -1,11 +1,8 @@
 from typing import List
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
-        """
-        Finds the smallest path sum from top to bottom in a triangle.
-        We start from the bottom and work our way up, updating the minimum
-        sums along the way.
-        """
+        #Finds the smallest path sum from top to bottom in a triangle.
+        #We start from the bottom and work our way up, updating the minimum sums along the way.
         if not triangle:
             # If the triangle is empty, there’s nothing to sum
             return 0
@@ -21,13 +18,3 @@ class Solution:
                 )
         # By the time we reach the top, the first element has the minimum path sum
         return running_totals[0]
-# example:
-if __name__ == "__main__":
-    triangle = [
-        [2],
-        [3, 4],
-        [6, 5, 7],
-        [4, 1, 8, 3]
-    ]
-    solution = Solution()
-    print("The minimum path sum is:", solution.minimumTotal(triangle))  # Should print 11
