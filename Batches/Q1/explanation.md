@@ -9,7 +9,7 @@
 Given a triangle array, find the minimum path sum from top to bottom.  
 At each step, you may move to adjacent numbers on the row below.
 
-**Example Triangle:**
+**Example Input/Output:**
 
 2  
 3 4  
