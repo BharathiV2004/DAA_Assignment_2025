@@ -33,11 +33,12 @@ Two possible ways to split the string into valid words:
 
 2.Define a recursive function dfs(start) that returns all valid sentences formed from s[start:].
 
-3.For each possible end index end > start: If s[start:end] is in the word set: 
-Recursively get all sentences from dfs(end) (the rest of the string).
-Prepend s[start:end] to each sentence from the recursion (with a space if needed).
-Use a memo dictionary to store results for each start index to avoid recomputation.
-Return the list of sentences for dfs(0) — the full string.
+3.For each possible end index end > start: 
+If s[start:end] is in the word set: 
+- Recursively get all sentences from dfs(end) (the rest of the string).
+- Prepend s[start:end] to each sentence from the recursion (with a space if needed).
+- Use a memo dictionary to store results for each start index to avoid recomputation.
+- Return the list of sentences for dfs(0) — the full string.
 
 **Why this works:**
 
@@ -45,9 +46,9 @@ DFS explores all possible segmentations, and memoization ensures we do not recom
 
 **Time and Space Complexity:**
 
-- Time Complexity:Exponential in the worst case (number of possible sentences). Memoization reduces repeated work.
+- Time Complexity: Exponential in the worst case (number of possible sentences). Memoization reduces repeated work.
 
-- Space Complexity:O(n * L) for recursion stack and memo storage (n = length of string, L = average length of sentence). Output space can also be exponential.
+- Space Complexity: O(n * L) for recursion stack and memo storage (n = length of string, L = average length of sentence). Output space can also be exponential.
 
 **Example:**
 
