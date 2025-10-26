@@ -35,7 +35,8 @@ Two possible ways to split the string into valid words:
 
 3.For each possible end index end > start: 
 
-If s[start:end] is in the word set: 
+  If s[start:end] is in the word set: 
+  
 - Recursively get all sentences from dfs(end) (the rest of the string).
 - Prepend s[start:end] to each sentence from the recursion (with a space if needed).
 - Use a memo dictionary to store results for each start index to avoid recomputation.
