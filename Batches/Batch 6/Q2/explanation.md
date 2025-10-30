@@ -51,7 +51,9 @@ DFS explores all possible segmentations, and memoization ensures we do not recom
 - Time Complexity: Exponential in the worst case (number of possible sentences). Memoization reduces repeated work.
   
     Best Case: O(n²) — only one valid segmentation path; each substring checked once, and memoization prevents recomputation.
+  
     Average Case: O(n² × k) — some branching occurs (k valid next words on average), but memoization reduces redundant DFS calls.
+  
     Worst Case: O(2ⁿ) — every substring is valid (e.g., "aaaaa" type case), causing exponential branching and many possible sentence combinations.
 
 
