@@ -46,9 +46,16 @@ Two possible ways to split the string into valid words:
 
 DFS explores all possible segmentations, and memoization ensures we do not recompute results for the same substring multiple times, which drastically improves efficiency.
 
-**Time and Space Complexity:**
+**Time Complexity:**
 
 - Time Complexity: Exponential in the worst case (number of possible sentences). Memoization reduces repeated work.
+  
+               -Best Case: O(n²) — only one valid segmentation path; each substring checked once, and memoization prevents recomputation.
+                -Average Case: O(n² × k) — some branching occurs (k valid next words on average), but memoization reduces redundant DFS calls.
+                -Worst Case: O(2ⁿ) — every substring is valid (e.g., "aaaaa" type case), causing exponential branching and many possible sentence combinations.
+
+
+**Space Complexity:**
 
 - Space Complexity: O(n * L) for recursion stack and memo storage (n = length of string, L = average length of sentence). Output space can also be exponential.
 
