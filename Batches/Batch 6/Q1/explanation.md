@@ -43,8 +43,6 @@ We solve this using a bottom-up dynamic programming approach:
 Each element only depends on the two elements below it. By starting from the bottom, we always know the minimum sums of the paths below, so we can update efficiently without needing a full 2D DP table.
 
 **Time Complexity:**
-
-- Time Complexity: O(n²)  
  
    Best Case: O(n²) — every element in the triangle is visited once (no early exits possible).
 
