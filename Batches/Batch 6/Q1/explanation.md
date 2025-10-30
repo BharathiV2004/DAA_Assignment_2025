@@ -42,10 +42,17 @@ We solve this using a bottom-up dynamic programming approach:
 
 Each element only depends on the two elements below it. By starting from the bottom, we always know the minimum sums of the paths below, so we can update efficiently without needing a full 2D DP table.
 
-**Time and Space Complexity:**
+**Time Complexity:**
 
 - Time Complexity: O(n²)  
-  We visit each element exactly once.
+ 
+   Best Case: O(n²) — every element in the triangle is visited once (no early exits possible).
+
+   Average Case: O(n²) — same as best; algorithm always processes all elements.
+
+   Worst Case: O(n²) — still visits every element once; no case causes extra work.
+
+**Space Complexity:**
 
 - Space Complexity: O(n)  
   We only need a single list to store the running totals of the current row.
